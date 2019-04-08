@@ -1,1 +1,1 @@
-# educational internship
+#Internship project

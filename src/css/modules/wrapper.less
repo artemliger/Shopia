@@ -1,0 +1,32 @@
+.header-top,
+.header-main,
+.support,
+.categories,
+.footer{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+      /* container */
+.header-top,
+.header-main,
+.slider,
+.footer{
+  position: relative;
+}
+
+.header-top::after,
+.header-main::after,
+.slider::after,
+.footer::after{
+content: '';
+display: block;
+height: 100%;
+width: 100vw;
+background-color: inherit;
+position: absolute;
+top: 0;
+z-index: -1;
+margin: auto;
+left: -50vw;
+right: -50vw;
+}
