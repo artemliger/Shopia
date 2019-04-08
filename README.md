@@ -1,1 +1,1 @@
-# Shopia
+# educational internship
