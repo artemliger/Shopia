@@ -1,0 +1,137 @@
+.brands{
+  margin-top: 80px;
+}
+// title & pseudo
+.brands-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 34px;
+}
+.brands-header::before,
+.brands-header::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 30%;
+  background: #e2e2e2;
+}
+.brands-header::before{
+  left: 0;
+}
+.brands-header::after{
+  right: 0;
+}
+// title
+.brands-header__title{
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: 'Playfair_Display-BoldItalic';
+  font-size: 30px;
+  line-height: .8;
+}
+.brands-header__title::before,
+.brands-header__title::after{
+  content: '';
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  transform: rotate(45deg);
+  background: #f09d66;
+}
+.brands-header__title::before{
+  left: -110px;
+}
+.brands-header__title::after{
+  right: -110px;
+}
+// image
+.brands-items{
+  margin-top: 110px;
+  margin-bottom: 116px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+//media
+@media screen and (max-width: 1200px){
+
+  .brands{
+    margin-top: 60px;
+  }
+  .brands-header::before,
+  .brands-header::after{
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+
+  .brands{
+    margin-top: 30px;
+  }
+  .brands-header::before,
+  .brands-header::after {
+    width: 20%;
+  }
+  .brands-items{
+    margin: 90px 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .brands{
+    margin-top: 15px;
+  }
+  .brands-header__title::before {
+    left: -45%;
+  }
+  .brands-header__title::after {
+    right: -45%;
+  }
+  .brands-items{
+    margin: 66px 0;
+  }
+}
+
+@media screen and (max-width: 610px) {
+
+  .brands{
+    margin-top: 0;
+  }
+  .brands-header__title::before {
+    left: -60%;
+  }
+  .brands-header__title::after {
+    right: -60%;
+  }
+  .brands-header::before,
+  .brands-header::after{
+    display: none;
+  }
+  .brands-items{
+    margin: 33px 0;
+  }
+}
+
+@media screen and (max-width: 375px){
+
+  .brands-header__title {
+    font-size: 26px;
+  }
+  .brands-header__title::before{
+    left: -40%;
+    width: 15px;
+    height: 15px;
+  }
+  .brands-header__title::after{
+    right: -40%;
+    width: 15px;
+    height: 15px;
+  }
+}

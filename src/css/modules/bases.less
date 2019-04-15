@@ -6,15 +6,60 @@ html {
   box-sizing: inherit;
 }
 body{
+  font-family: 'Lato-Regular';
   margin: 0;
   padding: 0;
 }
 h1,
+h2,
+p,
 ul,
-li{
+li,
+figure,
+input,
+button{
   list-style: none;
   margin: 0;
 }
 a{
   text-decoration: none;
+}
+input:active,
+input:focus,
+input:hover{
+  outline: 0;
+  outline-offset: 0;
+}
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+button:active,
+button:focus,
+button:hover{
+  outline: 0;
+  outline-offset: 0;
+}
+
+.hidden{
+  display: none;
 }

@@ -1,0 +1,40 @@
+.slick-dots{
+  position: absolute;
+  display: flex;
+  bottom: 5%;
+  left: 45%;
+}
+.slick-dots li{
+  margin-right: 10px;
+}
+.slick-dots li button:before {
+  content: '';
+  background: #fff;
+  width: 18px;
+  height: 19px;
+  transform: rotate(45deg);
+  opacity: .3;
+  color: #fff;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #000;
+  background: #000;
+}
+
+// slide
+
+.slick-slide{
+  display: flex;
+  justify-content: space-around;
+}
+.slick-slide {
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
+}
+.slick-initialized .slick-slide{
+  display: flex;
+}

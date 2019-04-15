@@ -8,9 +8,10 @@
 .header-top__phone{
   display: flex;
   align-items: center;
+  font-style: normal;
 }
 .header-top__phone-link{
-  font-size: 10.6px;
+  font-size: 11px;
   color: #000;
 }
 .header-top__phone-link:hover{
@@ -18,6 +19,7 @@
   fill: #d9bf8f;
 }
 .header-top__bar{
+  display: flex;
   font-size: 11px;
 }
 .bar-list{
@@ -46,6 +48,19 @@
 .bar-item__link:hover{
   color: #d9bf8f;
 }
+// burger
+
+.burger-btn{
+  display: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+}
+.burger-btn:hover{
+  cursor: pointer;
+  .burger{
+    fill: #d9bf8f;
+  }
+}
 
       /*  header-main  */
 .header-main{
@@ -68,8 +83,9 @@
   margin-right: 26px;
 }
 .menu-item__link{
-  font-size: 18px;
-  font-style: italic;
+  font-family: 'Playfair_Display-Italic';
+  font-size: 18.32px;
+  line-height: 0.983;
   color: #000;
 }
 .menu-item__link:hover{
@@ -77,12 +93,13 @@
 }
 // logo
 .header-main__logo{
-  padding: 32px 0;
-  padding-left: 50px;
+  padding-top: 32px;
+  padding-bottom: 25px;
 }
 .logo-title{
+  font-family: 'KrinkesDecorPERSONAL';
   font-size: 72px;
-  line-height: .8;
+  line-height: 1.15;
 
 }
 // social & currency
@@ -97,7 +114,9 @@
 .form-currency{
   padding: 14px;
   background: #000;
+  font-family: 'Lato-Bold';
   font-size: 12px;
+  line-height: 1.5;
   color: #fff;
   border: 0;
 }
@@ -108,4 +127,89 @@
 .option{
   padding: 2px;
   color: inherit;
+}
+
+
+// media
+
+@media screen and (max-width: 900px){
+
+  .header-main,
+  .header-main__social-media{
+    flex-direction: column;
+  }
+  .header-main__menu{
+    padding-top: 20px;
+  }
+  .social-media__form{
+    margin-left: 0;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 680px){
+
+  .header-top{
+    flex-direction: column;
+  }
+  .header-top__phone-link{
+    padding-bottom: 10px;
+  }
+  .bar-list{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px){
+
+  .header-top{
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .header-top__phone-link{
+      padding-bottom: 0;
+    }
+    .header-top__bar{
+      display: none;
+    }
+    .bar-list{
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      top: 53px;
+      left: 50%;
+      background: #f2f2f2;
+      z-index: 555;
+    }
+    .bar-item{
+      padding: 10px;
+      border-right: none;
+      margin-right: 0;
+    }
+    .burger-btn{
+      display: block;
+      padding: 0;
+      margin-top: 0;
+    }
+  }
+  .header-main__menu{
+    padding-top: 10px;
+  }
+  .header-main__logo{
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+  .menu-item__link{
+    font-size: 17px;
+  }
+  .social-media__form{
+    padding-top: 10px;
+  }
+  .form-currency{
+    padding: 10px;
+  }
+
 }

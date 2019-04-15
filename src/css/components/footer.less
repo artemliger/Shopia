@@ -1,11 +1,14 @@
 .footer{
+  position: relative;
   background: #141414;
-  padding: 70px 10px;
+  padding: 0 10px;
   line-height: .8;
 }
 .footer-menu{
   display: flex;
   justify-content: space-between;
+  padding: 70px 0;
+  border-bottom: 1px solid #323030;
 }
 .footer-menu__item{
   display: flex;
@@ -13,8 +16,8 @@
 }
 .item-header{
   text-transform: uppercase;
+  font-family: 'Lato-Bold';
   font-size: 16px;
-  font-weight: bold;
   color: #fff;
   padding-bottom: 50px;
 }
@@ -27,6 +30,11 @@
 .item-list__link{
   font-size: 14px;
   color: #818181;
+}
+.item-list__link:hover,
+.item-list__link:focus,
+.item-list__link:active{
+  color: #fff;
 }
 // social
 .footer-menu__social{
@@ -45,22 +53,114 @@
 }
 .footer-menu__link:hover{
   background-color: #141414;
-
-}
-.footer-menu__link .footer-icon:hover{
-  fill: #fff;
+  .footer-icon{
+    fill: #fff;
+  }
+  transition: .2s;
 }
 // form
 .footer-menu__form{
   display: flex;
   flex-direction: column;
+  color: #fff;
 }
 .form-title{
   font-size: 16px;
   font-weight: bold;
-  color: #fff;
   padding: 50px 0 55px 0;
 }
 .form-sub{
-  display: flex
+  display: flex;
+  width: 94%;
+  padding: 3px;
+  font-size: 12px;
+  border: 1px solid #323030;
+}
+.form-input,
+.form-btn{
+  border: none;
+}
+.form-input{
+  width: 100%;
+  padding-left: 22px;
+  background: inherit;
+  color: #323030;
+}
+.form-btn{
+  padding: 13px 15px 12px 21px;
+  background: #323030;
+  color: #fff;
+}
+.form-btn:hover{
+  cursor: pointer;
+  background: #fff;
+  color: #323030;
+}
+.form-btn:focus,
+.form-btn:active{
+  border: -1px solid #323030;
+}
+// pseudo
+.footer::before{
+  position: absolute;
+  content: '';
+  bottom: 165.5px;
+  left: calc(50% - 12px);
+  width: 0;
+  height: 0;
+  border-top: 9px solid #323030;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+
+// copyright
+.copyright{
+  padding-top: 30px;
+  padding-bottom: 47px;
+}
+.copyright-info{
+  font-size: 11px;
+  line-height: 1.6;
+  color: #323030;
+}
+.copyright-image{
+  padding-top: 30px;
+}
+
+
+// media
+@media screen and (max-width: 880px){
+
+  .footer-menu{
+    flex-wrap: wrap;
+  }
+  .footer-menu__item:not(:last-child){
+    padding-right: 20px;
+  }
+  .footer-menu__item:last-child{
+    padding-top: 20px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px){
+
+  .footer-menu{
+    justify-content: center;
+    padding: 30px 0;
+  }
+  .footer-menu__item:last-child{
+     padding-left: 0;
+     padding-top: 0;
+   }
+  .footer-menu__item:not(:last-child){
+     display: none;
+  }
+}
+
+@media screen and (max-width: 375px){
+
+  .footer-menu__social-item{
+    margin-right: 6px;
+  }
 }

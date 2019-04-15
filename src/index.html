@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopia</title>
     <meta name="description" content="description">
+    <link rel="stylesheet" href="assets/libs/slick-carousel/slick.css">
+    <link rel="stylesheet" href="assets/libs/slick-carousel/slick-theme.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer src="assets/libs/jquery/jquery.min.js"></script>
+    <script defer src="assets/libs/slick-carousel/slick.min.js"></script>
     <script defer src="assets/js/main.js"></script>
 </head>
 <body>
@@ -20,6 +23,13 @@
                     </svg>Call +001 555 801
                 </a>
             </address>
+
+            <button class="burger-btn">
+                <svg class="burger" aria-hidden="true">
+                    <use xlink:href="assets/img/svg/svg-symbols.svg#menu"></use>
+                </svg>
+            </button>
+
             <div class="header-top__bar">
                 <ul class="bar-list">
                     <li class="bar-item">
@@ -91,10 +101,58 @@
             </div>
         </div>
     </header>
-    <div class="slider">
+
+    <div class="slider carousel">
         <div class="slider-main">
-            <img class="slider-back" src="/assets/images/layer_3.png"
-                 srcset="/assets/images/layer_3@2x.png 2x, /assets/images/layer_3@3x.png 3x, /assets/images/layer_3@4x.png 4x" alt="background-image">
+            <img class="slider-back" src="assets/images/layer_3.png" alt="background-image">
+            <div class="slider-item__content">
+                <div class="slider-item">
+                    <div class="content-info">
+                        <span class="content-info__title">mid-season</span>
+                        <span class="content-info__offer">sale</span>
+                        <div class="content-info__action-decor">
+                            <span class="content-info__action">up to</span>
+                        </div>
+                        <span class="content-info__sale">50% off</span>
+                    </div>
+                </div>
+                <a href="#" class="slider-btn">shop now</a>
+            </div>
+        </div>
+        <div class="slider-main">
+            <img class="slider-back" src="assets/images/layer_3.png" alt="background-image">
+            <div class="slider-item__content">
+                <div class="slider-item">
+                    <div class="content-info">
+                        <span class="content-info__title">mid-season</span>
+                        <span class="content-info__offer">sale</span>
+                        <div class="content-info__action-decor">
+                            <span class="content-info__action">up to</span>
+                        </div>
+                        <span class="content-info__sale">50% off</span>
+                    </div>
+                </div>
+                <a href="#" class="slider-btn">shop now</a>
+            </div>
+        </div>
+        <div class="slider-main">
+            <img class="slider-back" src="assets/images/layer_3.png" alt="background-image">
+            <div class="slider-item__content">
+                <div class="slider-item">
+                    <div class="content-info">
+                        <span class="content-info__title">mid-season</span>
+                        <span class="content-info__offer">sale</span>
+                        <div class="content-info__action-decor">
+                            <span class="content-info__action">up to</span>
+                        </div>
+                        <span class="content-info__sale">50% off</span>
+                    </div>
+                </div>
+                <a href="#" class="slider-btn">shop now</a>
+            </div>
+        </div>
+        <div class="slider-main">
+            <img class="slider-back" src="assets/images/layer_3.png" alt="background-image">
             <div class="slider-item__content">
                 <div class="slider-item">
                     <div class="content-info">
@@ -110,6 +168,7 @@
             </div>
         </div>
     </div>
+
     <div class="support">
         <div class="support-item">
             <svg class="sup_icon s_air" aria-hidden="true">
@@ -151,23 +210,187 @@
             </div>
         </div>
     </div>
-    <div class="categories">
+
+    <section class="categories">
         <div class="categories-header">
             <h2 class="categories-header__title">
                 HandPicked
             </h2>
         </div>
-        <div class="show">
-            здесь будут красивые картиночки... <br> скоро!!!
+        <div class="categories-items">
+            <figure class="categories-item item-card__first">
+                <img class="item-image" src="assets/images/card_1.png"
+                     srcset="assets/images/card_1@2x.png 2x, assets/images/card_1@3x.png 3x, assets/images/card_1@4x.png 4x" alt="product-card">
+                <div class="item-hover hover">
+                    <a href="#" class="item-hover__btn">shop now</a>
+                </div>
+            </figure>
+            <figure class="categories-item item-card__second">
+                <img class="item-image" src="assets/images/card_2.png"
+                     srcset="assets/images/card_2@2x.png 2x, assets/images/card_2@3x.png 3x, assets/images/card_2@4x.png 4x" alt="product-card">
+                <div class="item-hover">
+                    <a href="#" class="item-hover__btn">shop now</a>
+                </div>
+            </figure>
+            <figure class="categories-item item-card__third">
+                <img class="item-image" src="assets/images/card_3.png"
+                     srcset="assets/images/card_3@2x.png 2x, assets/images/card_3@3x.png 3x, assets/images/card_3@4x.png 4x" alt="product-card">
+                <div class="item-hover">
+                    <a href="#" class="item-hover__btn">shop now</a>
+                </div>
+            </figure>
+            <figure class="categories-item item-card__fourth">
+                <img class="item-image" src="assets/images/card_4.png"
+                     srcset="assets/images/card_4@2x.png 2x, assets/images/card_4@3x.png 3x, assets/images/card_4@4x.png 4x" alt="product-card">
+                <div class="item-hover">
+                    <a href="#" class="item-hover__btn">shop now</a>
+                </div>
+            </figure>
+            <figure class="categories-item item-card__fifth">
+                <img class="item-image" src="assets/images/card_5.png"
+                     srcset="assets/images/card_5@2x.png 2x, assets/images/card_5@3x.png 3x, assets/images/card_5@4x.png 4x" alt="product-card">
+                <div class="item-hover">
+                    <a href="#" class="item-hover__btn">shop now</a>
+                </div>
+            </figure>
         </div>
-        <!--
-        <figure class="categories-item">
-            <img class="item-image" src="/assets/images/card_1.png"
-                 srcset="/assets/images/card_1@2x.png 2x, /assets/images/card_1@3x.png 3x, /assets/images/card_1@4x.png 4x" alt="product-card">
-        </figure>
-        -->
-    </div>
+    </section>
 
+    <section class="collection">
+        <div class="collection-header">
+            <h2 class="collection-header__title">
+                Summer Collection
+            </h2>
+        </div>
+        <div class="collection-items">
+            <figure class="collection-item">
+                <div class="collection-item__discount">
+                    20
+                    <span class="symbol">
+                        %
+                    </span>
+                </div>
+                <img class="collection-item__image" src="assets/images/cart_1.png"
+                     srcset="assets/images/cart_1@2x.png 2x, assets/images/cart_1@3x.png 3x, assets/images/cart_1@4x.png 4x" alt="product-card">
+                <a href="#" class="item-add__btn">+ add to cart</a>
+            </figure>
+            <figure class="collection-item">
+                <img class="collection-item__image" src="assets/images/cart_2.png"
+                     srcset="assets/images/cart_2@2x.png 2x, assets/images/cart_2@3x.png 3x, assets/images/cart_2@4x.png 4x" alt="product-card">
+                <a href="#" class="item-add__btn">+ add to cart</a>
+            </figure>
+            <figure class="collection-item">
+                <img class="collection-item__image" src="assets/images/cart_3.png"
+                     srcset="assets/images/cart_3@2x.png 2x, assets/images/cart_3@3x.png 3x, assets/images/cart_3@4x.png 4x" alt="product-card">
+                <a href="#" class="item-add__btn">+ add to cart</a>
+            </figure>
+            <figure class="collection-item">
+                <div class="collection-item__discount">
+                    40
+                    <span class="symbol">
+                        %
+                    </span>
+                </div>
+                <img class="collection-item__image" src="assets/images/cart_4.png"
+                     srcset="assets/images/cart_4@2x.png 2x, assets/images/cart_4@3x.png 3x, assets/images/cart_4@4x.png 4x" alt="product-card">
+                <a href="#" class="item-add__btn">+ add to cart</a>
+            </figure>
+            <figure class="collection-item">
+                <div class="collection-item__discount">
+                    20
+                    <span class="symbol">
+                        %
+                    </span>
+                </div>
+                <img class="collection-item__image" src="assets/images/cart_5.png"
+                     srcset="assets/images/cart_5@2x.png 2x, assets/images/cart_5@3x.png 3x, assets/images/cart_5@4x.png 4x" alt="product-card">
+                <a href="#" class="item-add__btn">+ add to cart</a>
+            </figure>
+            <figure class="collection-item">
+                <img class="collection-item__image" src="assets/images/cart_6.png"
+                     srcset="assets/images/cart_6@2x.png 2x, assets/images/cart_6@3x.png 3x, assets/images/cart_6@4x.png 4x" alt="product-card">
+                <a href="#" class="item-add__btn">+ add to cart</a>
+            </figure>
+            <figure class="collection-item">
+                <img class="collection-item__image" src="assets/images/cart_7.png"
+                     srcset="assets/images/cart_7@2x.png 2x, assets/images/cart_7@3x.png 3x, assets/images/cart_7@4x.png 4x" alt="product-card">
+                <a href="#" class="item-add__btn">+ add to cart</a>
+            </figure>
+            <figure class="collection-item">
+                <div class="collection-item__discount">
+                    40
+                    <span class="symbol">
+                        %
+                    </span>
+                </div>
+                <img class="collection-item__image" src="assets/images/cart_8.png"
+                     srcset="assets/images/cart_8@2x.png 2x, assets/images/cart_8@3x.png 3x, assets/images/cart_8@4x.png 4x" alt="product-card">
+                <a href="#" class="item-add__btn">+ add to cart</a>
+            </figure>
+        </div>
+    </section>
+
+    <section class="brands">
+        <div class="brands-header">
+            <h2 class="brands-header__title">
+                Our Brand
+            </h2>
+        </div>
+        <figure class="brands-items show">
+            <img class="brands-items__image" src="assets/images/bd_1.png"
+                 srcset="assets/images/bd_1@2x.png 2x, assets/images/bd_1@3x.png 3x, assets/images/bd_1@4x.png 4x" alt="brands-image">
+            <img class="brands-items__image" src="assets/images/bd_2.png"
+                 srcset="assets/images/bd_2@2x.png 2x, assets/images/bd_2@3x.png 3x, assets/images/bd_2@4x.png 4x" alt="brands-image">
+            <img class="brands-items__image" src="assets/images/bd_3.png"
+                 srcset="assets/images/bd_3@2x.png 2x, assets/images/bd_3@3x.png 3x, assets/images/bd_3@4x.png 4x" alt="brands-image">
+            <img class="brands-items__image" src="assets/images/bd_4.png"
+                 srcset="assets/images/bd_4@2x.png 2x, assets/images/bd_4@3x.png 3x, assets/images/bd_4@4x.png 4x" alt="brands-image">
+            <img class="brands-items__image" src="assets/images/bd_5.png"
+                 srcset="assets/images/bd_5@2x.png 2x, assets/images/bd_5@3x.png 3x, assets/images/bd_5@4x.png 4x" alt="brands-image">
+            <img class="brands-items__image" src="assets/images/bd_1.png"
+                 srcset="assets/images/bd_6@2x.png 2x, assets/images/bd_6@3x.png 3x, assets/images/bd_6@4x.png 4x" alt="brands-image">
+        </figure>
+    </section>
+
+    <section class="response">
+        <div class="response-header">
+            <h2 class="response-header__title">
+                Customers Says
+            </h2>
+        </div>
+        <div class="response-items">
+            <figure class="response-item">
+                <img class="response-item__image" src="assets/images/woman.png"
+                     srcset="assets/images/woman@2x.png 2x, assets/images/woman@3x.png 3x, assets/images/woman@4x.png 4x" alt="woman-image">
+                <figcaption class="response-item__content">
+                    <p class="content-text">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    </p>
+                    <span class="content-person">
+                        Sandra Dewi
+                    </span>
+                    <span class="content-position">
+                        fashion stylish
+                    </span>
+                </figcaption>
+            </figure>
+            <figure class="response-item">
+                <img class="response-item__image" src="assets/images/man.png"
+                     srcset="assets/images/man@2x.png 2x, assets/images/man@3x.png 3x, assets/images/man@4x.png 4x" alt="man-image">
+                <figcaption class="response-item__content content-align">
+                    <p class="content-text">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    </p>
+                    <span class="content-person">
+                        Shaheer Sheikh
+                    </span>
+                    <span class="content-position">
+                        designer
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footer-menu">
@@ -319,6 +542,27 @@
                         </button>
                     </div>
                 </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <small class="copyright-info">
+                &copy; 2015 Shopia Fashion Store Shopify.<br>
+                All Rights Reserved. Ecommerce Software by Shopify.<br>
+                Designed by MoccaLabs.com
+            </small>
+            <div class="copyright-image">
+                <svg class="copyright-icon" aria-hidden="true">
+                    <use xlink:href="assets/img/svg/svg-symbols.svg#visa"></use>
+                </svg>
+                <svg class="copyright-icon" aria-hidden="true">
+                    <use xlink:href="assets/img/svg/svg-symbols.svg#master"></use>
+                </svg>
+                <svg class="copyright-icon" aria-hidden="true">
+                    <use xlink:href="assets/img/svg/svg-symbols.svg#amex"></use>
+                </svg>
+                <svg class="copyright-icon" aria-hidden="true">
+                    <use xlink:href="assets/img/svg/svg-symbols.svg#discover"></use>
+                </svg>
             </div>
         </div>
     </footer>
