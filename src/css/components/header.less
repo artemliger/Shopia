@@ -108,21 +108,48 @@
   align-items: center;
 }
 .social-media__form{
+  position: relative;
+  display: flex;
+  align-items: center;
   color: #d9bf8f;
   margin-left: 32px;
 }
 .form-currency{
-  padding: 14px;
+  padding: 14px 25px 14px 20px;
   background: #000;
   font-family: 'Lato-Bold';
   font-size: 12px;
   line-height: 1.5;
   color: #fff;
   border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+// arrow pseudo select
+.social-media__form:after {
+  content: "";
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+  pointer-events: none;
+
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+.social-media__form:hover:after,
+.social-media__form:focus:after{
+  border-color: #d9bf8f transparent transparent transparent;
 }
 .form-currency:hover{
   color: #d9bf8f;
   cursor: pointer;
+}
+.form-currency:focus{
+  color: #d9bf8f;
 }
 .option{
   padding: 2px;
@@ -172,9 +199,6 @@
     .header-top__phone-link{
       padding-bottom: 0;
     }
-    .header-top__bar{
-      display: none;
-    }
     .bar-list{
       position: absolute;
       flex-direction: column;
@@ -207,9 +231,13 @@
   }
   .social-media__form{
     padding-top: 10px;
+    width: 40%;
   }
   .form-currency{
     padding: 10px;
+  }
+  .social-media__form::after{
+    right: 5px;
   }
 
 }
