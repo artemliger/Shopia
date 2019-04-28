@@ -1,5 +1,6 @@
 window.onload = function(){
 
+    // main slider
     $('.carousel').slick({
         arrows: true,
         dots: true,
@@ -8,7 +9,7 @@ window.onload = function(){
         speed: 1000,
     });
 
-    let categoryItem = document.querySelectorAll('.categories .categories-item');
+    /*let categoryItem = document.querySelectorAll('.categories .categories-item');
     let hoverItem = document.querySelectorAll('.categories .item-hover');
 
     for ( let i = 0; i < categoryItem.length; i++) {
@@ -19,10 +20,10 @@ window.onload = function(){
         categoryItem[i].addEventListener('mouseleave', () => {
             hoverItem[i].classList.add('clear');
         });
-    }
+    }*/
 
 
-
+    // brand's slider
     let $show = $('.show');
     let showSettings = {
         autoplay: true,
@@ -68,52 +69,24 @@ window.onload = function(){
             return $show.slick(showSettings);
         }
     });
-    /*
-    $('.show').slick({
-        mobileFirst: true,
-        infinite: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        speed: 1000,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-            {
-                breakpoint: 1290,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                    infinite: true,
-                    slidesToShow: 4,
-                    slidesToScroll: 4
-                }
-            },
-            {
-                breakpoint: 700,
-                settings: {
-                    infinite: true,
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 380,
-                settings: {
-                    infinite: true,
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }
-        ]
+
+
+    /*$('.burger-btn').on("click", function() {
+        $('.bar-list').slideToggle('slow', function() {
+            $('.bar-list').removeAttr('display style')
+        })
     });*/
 
-    $('.burger-btn').on("click", function() {
-        $('.bar-list').slideToggle('slow');
+    // burger
+    let burgerBtn = document.querySelector('.header .burger-btn');
+    let topMenu = document.querySelector('.bar-list');
+
+    burgerBtn.addEventListener('click', () => {
+        topMenu.classList.toggle('view');
     });
 
 
+    // scroll
     $(document).ready(function(){
 
         $(window).scroll(function(){

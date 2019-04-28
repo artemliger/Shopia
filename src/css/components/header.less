@@ -61,6 +61,11 @@
     fill: #d9bf8f;
   }
 }
+// burger show
+.view{
+  display: block !important;
+  transition: 3s;
+}
 
       /*  header-main  */
 .header-main{
@@ -113,6 +118,7 @@
   align-items: center;
   color: #d9bf8f;
   margin-left: 32px;
+  width: 98px;
 }
 .form-currency{
   padding: 14px 25px 14px 20px;
@@ -190,6 +196,17 @@
 
 @media screen and (max-width: 500px){
 
+
+  .bar-list{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    top: 53px;
+    left: 50%;
+    background: #f2f2f2;
+    z-index: 555;
+  }
   .header-top{
     position: relative;
     flex-direction: row;
@@ -198,15 +215,6 @@
 
     .header-top__phone-link{
       padding-bottom: 0;
-    }
-    .bar-list{
-      position: absolute;
-      flex-direction: column;
-      justify-content: center;
-      top: 53px;
-      left: 50%;
-      background: #f2f2f2;
-      z-index: 555;
     }
     .bar-item{
       padding: 10px;
